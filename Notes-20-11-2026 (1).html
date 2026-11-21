@@ -1,0 +1,516 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKIES GARAGE</title>
+    <!-- Google Fonts: Script font for title & clean sans-serif for nav -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Gemini Homepage Style Dark Background */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            body {
+    background-color: #131314;
+    background-image: 
+        linear-gradient(rgba(19, 19, 20, 0.45), rgba(19, 19, 20, 0.45)),
+        url('image_2e900a9b.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #e3e3e3;
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 15px 60px;
+}
+            color: #e3e3e3;
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 35px 15px 60px;
+        }
+
+        /* Header Section: Script Font + Capital H2 */
+        header {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        header h2 {
+            font-family: 'Pacifico', 'Great Vibes', cursive;
+            font-size: 3rem;
+            text-transform: uppercase; /* Capital Letters */
+            letter-spacing: 3px;
+            font-weight: 400;
+            /* Gemini Signature Gradient Text */
+            background: linear-gradient(90deg, #4285f4 0%, #9b72cb 50%, #d96570 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 15px rgba(155, 114, 203, 0.3));
+            user-select: none;
+        }
+
+        /* Black Background Box for Navigation */
+        .nav-container {
+            background-color: #000000;
+            padding: 14px 24px;
+            border-radius: 18px;
+            border: 1px solid #282a2c;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 45px;
+        }
+
+        /* Alag-Alag Dibbe (Separate Boxes) */
+        .nav-box {
+            background-color: #1e1f20;
+            color: #e3e3e3;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            border: 1px solid #333537;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .nav-box:hover, .nav-box.active {
+            background-color: #282a2c;
+            border-color: #9b72cb;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(155, 114, 203, 0.25);
+        }
+
+        /* =========================================================
+           BOOKSHELF SECTION (Exact Match to Uploaded Image)
+           ========================================================= */
+        .bookshelf-wrapper {
+            width: 100%;
+            max-width: 920px;
+            background-color: #0b2d36; /* Dark teal shelf backing from image */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
+        }
+
+        /* Individual Shelf Row */
+        .shelf-row {
+            position: relative;
+            height: 155px;
+            padding: 18px 22px 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 4px;
+            border-bottom: 18px solid #137682; /* Teal wooden shelf plank */
+            box-shadow: inset 0 -4px 0 #0e5861;
+        }
+
+        /* Base Book Block Styling */
+        .book {
+            position: relative;
+            border-radius: 2px 2px 0 0;
+            cursor: pointer;
+            transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.2s ease;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .book:hover {
+            transform: translateY(-12px);
+            filter: brightness(1.12);
+            z-index: 10;
+        }
+
+        /* Color Palette from the Reference Image */
+        .c-orange { background-color: #ef6328; }
+        .c-yellow { background-color: #f4b728; }
+        .c-teal   { background-color: #16989d; }
+        .c-cyan   { background-color: #21a6a0; }
+        .c-navy   { background-color: #1d4e72; }
+        .c-dark   { background-color: #233c4b; }
+        .c-cream  { background-color: #f6eed9; }
+
+        /* Spine Decorative Elements (Stripes, Diamonds, Circles) */
+        .stripe-top::before, .stripe-both::before {
+            content: '';
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.35);
+            margin-top: 10px;
+        }
+
+        .stripe-both::after {
+            content: '';
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.35);
+            margin-bottom: 10px;
+        }
+
+        .band-teal::before {
+            content: '';
+            width: 100%;
+            height: 16px;
+            background: #16989d;
+            margin-top: 12px;
+        }
+
+        .band-cream::before {
+            content: '';
+            width: 100%;
+            height: 14px;
+            background: #f6eed9;
+            margin-top: 14px;
+        }
+
+        .diamond {
+            width: 14px;
+            height: 18px;
+            border: 2px solid rgba(29, 78, 114, 0.65);
+            transform: rotate(45deg) scale(0.75);
+            margin: auto;
+        }
+
+        .circle-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.25);
+            margin-top: 18px;
+        }
+
+        .circle-orange {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #ef6328;
+            margin-top: 18px;
+        }
+
+        /* Open/Pages-Facing Books (Cream pages with dark cover borders) */
+        .book-pages {
+            background-color: #f6eed9;
+            border-left: 5px solid #1d4e72;
+            border-right: 5px solid #1d4e72;
+            border-top: 4px solid #0b2d36;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .book-pages-orange {
+            background-color: #f6eed9;
+            border-left: 5px solid #ef6328;
+            border-right: 5px solid #ef6328;
+            border-top: 4px solid #0b2d36;
+            border-radius: 4px 4px 0 0;
+        }
+
+        /* Leaning / Tilted Books */
+        .lean-right {
+            transform: rotate(22deg);
+            transform-origin: bottom right;
+            margin-right: 26px;
+        }
+        .lean-right:hover {
+            transform: rotate(22deg) translateY(-10px);
+        }
+
+        .lean-left {
+            transform: rotate(-24deg);
+            transform-origin: bottom left;
+            margin-left: 28px;
+        }
+        .lean-left:hover {
+            transform: rotate(-24deg) translateY(-10px);
+        }
+
+        /* Horizontal Stacked Books */
+        .stack-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .book-horiz {
+            height: 18px;
+            border-radius: 2px;
+            margin-top: 1px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .book-horiz:hover {
+            transform: translateX(6px);
+        }
+
+        /* Decorative Globe on Shelf 3 (Matches Reference Image) */
+        .globe-wrap {
+            position: relative;
+            width: 68px;
+            height: 105px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0 6px;
+            cursor: pointer;
+            transition: transform 0.25s ease;
+        }
+        .globe-wrap:hover {
+            transform: translateY(-8px);
+        }
+        .globe-sphere {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #2ec4b6, #16989d 65%, #0f686c);
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset -6px -6px 0 rgba(0,0,0,0.15);
+            margin-bottom: 6px;
+        }
+        /* Continents blob */
+        .globe-sphere::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            width: 24px;
+            height: 18px;
+            background: #52d681;
+            border-radius: 40% 60% 50% 40%;
+            opacity: 0.7;
+        }
+        .globe-sphere::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            width: 18px;
+            height: 14px;
+            background: #52d681;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        .globe-arc {
+            position: absolute;
+            top: 24px;
+            left: 4px;
+            width: 58px;
+            height: 62px;
+            border: 3px solid #f4b728;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-radius: 50%;
+            transform: rotate(25deg);
+        }
+        .globe-stand {
+            width: 6px;
+            height: 12px;
+            background: #f4b728;
+        }
+        .globe-base {
+            width: 34px;
+            height: 7px;
+            background: #f4b728;
+            border-radius: 4px 4px 0 0;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            header h2 { font-size: 2.2rem; }
+            .bookshelf-wrapper { overflow-x: auto; }
+            .shelf-row { min-width: 780px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Script Font Capital H2 -->
+    <header>
+        <h2>BOOKIES GARAGE</h2>
+    </header>
+
+    <!-- Black Background Dabba with Separate Boxes -->
+    <nav class="nav-container">
+        <a href="#home" class="nav-box active">HOME</a>
+        <a href="#books" class="nav-box">BOOKS</a>
+        <a href="#audiobooks" class="nav-box">AUDIO BOOKS</a>
+    </nav>
+
+    <!-- Exact Bookshelf Blocks Matching the Image -->
+    <main class="bookshelf-wrapper" id="books">
+        
+        <!-- SHELF 1 -->
+        <div class="shelf-row">
+            <div class="book book-pages lean-left" style="width: 34px; height: 95px;" title="Classic Tale"></div>
+            <div class="book c-teal stripe-both" style="width: 18px; height: 85px;"></div>
+            <div class="book c-orange stripe-top" style="width: 18px; height: 105px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 34px; height: 118px;"><div class="diamond"></div></div>
+            <div class="book c-teal" style="width: 42px; height: 90px;"><div class="diamond"></div></div>
+            <div class="book book-pages" style="width: 24px; height: 110px;"></div>
+            <div class="book c-dark stripe-top" style="width: 22px; height: 102px;"></div>
+            <div class="book c-orange stripe-both" style="width: 32px; height: 92px;"><div class="diamond"></div></div>
+            <div class="book book-pages" style="width: 34px; height: 78px;"></div>
+            <div class="book c-dark" style="width: 14px; height: 122px;"></div>
+            <div class="book c-teal stripe-both" style="width: 18px; height: 115px;"></div>
+            <div class="book c-orange band-teal" style="width: 38px; height: 105px;"></div>
+
+            <!-- Horizontal Stack on Shelf 1 -->
+            <div class="stack-group">
+                <div class="book-horiz c-teal" style="width: 82px; height: 22px; display:flex; align-items:center;"><div class="diamond"></div></div>
+            </div>
+
+            <div class="book c-yellow stripe-both lean-right" style="width: 16px; height: 88px;"></div>
+            <div class="book c-dark" style="width: 12px; height: 112px;"></div>
+            <div class="book c-orange stripe-top" style="width: 22px; height: 98px;"></div>
+            <div class="book book-pages" style="width: 32px; height: 82px;"></div>
+        </div>
+
+        <!-- SHELF 2 -->
+        <div class="shelf-row">
+            <div class="book book-pages" style="width: 32px; height: 84px;"></div>
+            <div class="book c-orange stripe-both" style="width: 18px; height: 112px;"></div>
+            <div class="book c-teal stripe-both" style="width: 28px; height: 100px;"></div>
+            <div class="book c-dark stripe-top" style="width: 16px; height: 106px;"></div>
+            <div class="book book-pages-orange" style="width: 22px; height: 116px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 18px; height: 90px;"></div>
+            <div class="book c-navy stripe-both" style="width: 34px; height: 114px;"></div>
+            <div class="book book-pages lean-left" style="width: 20px; height: 110px;"></div>
+            <div class="book c-dark" style="width: 12px; height: 120px;"></div>
+            <div class="book c-teal stripe-top" style="width: 18px; height: 95px;"></div>
+            <div class="book book-pages" style="width: 34px; height: 76px;"></div>
+            <div class="book c-orange stripe-both" style="width: 42px; height: 105px;"><div class="circle-dot"></div></div>
+            <div class="book c-yellow stripe-both" style="width: 12px; height: 68px;"></div>
+            <div class="book c-teal stripe-top" style="width: 18px; height: 102px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 30px; height: 104px;"></div>
+            <div class="book c-teal" style="width: 14px; height: 118px;"></div>
+            <div class="book book-pages-orange" style="width: 34px; height: 102px;"></div>
+            <div class="book c-teal stripe-both" style="width: 40px; height: 114px;"><div class="diamond"></div></div>
+            <div class="book c-dark stripe-top lean-right" style="width: 18px; height: 86px;"></div>
+            <div class="book book-pages lean-right" style="width: 18px; height: 108px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 24px; height: 105px;"></div>
+            <div class="book book-pages" style="width: 24px; height: 74px;"></div>
+        </div>
+
+        <!-- SHELF 3 (Includes Globe & Stacked Books) -->
+        <div class="shelf-row">
+            <div class="book c-teal stripe-top" style="width: 12px; height: 75px;"></div>
+            <div class="book c-teal stripe-both" style="width: 14px; height: 120px;"></div>
+            <div class="book c-yellow band-cream" style="width: 30px; height: 104px;"></div>
+            <div class="book c-teal stripe-both" style="width: 18px; height: 96px;"></div>
+            <div class="book c-orange stripe-both lean-right" style="width: 24px; height: 112px;"></div>
+            <div class="book c-orange stripe-both" style="width: 32px; height: 88px;"></div>
+            <div class="book c-yellow stripe-top" style="width: 20px; height: 112px;"></div>
+            <div class="book c-teal" style="width: 36px; height: 82px;"><div class="circle-dot"></div></div>
+            <div class="book c-orange stripe-both" style="width: 18px; height: 118px;"></div>
+            <div class="book book-pages" style="width: 34px; height: 76px;"></div>
+            <div class="book book-pages-orange" style="width: 34px; height: 106px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 40px; height: 118px;"><div class="diamond"></div></div>
+            <div class="book c-navy stripe-both" style="width: 20px; height: 104px;"></div>
+            <div class="book book-pages lean-right" style="width: 16px; height: 75px;"></div>
+
+            <!-- Decorative Globe -->
+            <div class="globe-wrap" title="World Atlas">
+                <div class="globe-sphere"></div>
+                <div class="globe-arc"></div>
+                <div class="globe-stand"></div>
+                <div class="globe-base"></div>
+            </div>
+
+            <div class="book c-teal stripe-top lean-left" style="width: 16px; height: 108px;"></div>
+
+            <!-- Stacked Horizontal Books on Right -->
+            <div class="stack-group">
+                <div class="book-horiz c-dark" style="width: 72px; height: 12px;"></div>
+                <div class="book-horiz c-yellow" style="width: 86px; height: 15px;"></div>
+                <div class="book-horiz c-teal" style="width: 96px; height: 16px;"></div>
+                <div class="book-horiz c-yellow" style="width: 82px; height: 16px;"></div>
+                <div class="book-horiz c-orange" style="width: 94px; height: 22px;"></div>
+            </div>
+        </div>
+
+        <!-- SHELF 4 -->
+        <div class="shelf-row">
+            <div class="book c-orange stripe-both lean-right" style="width: 22px; height: 116px;"></div>
+            <div class="book c-teal stripe-top lean-right" style="width: 24px; height: 102px;"></div>
+            <div class="book c-yellow band-cream lean-right" style="width: 26px; height: 92px;"></div>
+            <div class="book c-teal stripe-both" style="width: 38px; height: 118px;"><div class="diamond"></div></div>
+            <div class="book c-orange stripe-both" style="width: 18px; height: 104px;"></div>
+            <div class="book c-navy stripe-both" style="width: 22px; height: 104px;"></div>
+            <div class="book book-pages-orange" style="width: 34px; height: 106px;"></div>
+            <div class="book book-pages lean-right" style="width: 18px; height: 96px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 26px; height: 104px;"></div>
+            <div class="book c-teal" style="width: 14px; height: 120px;"></div>
+            <div class="book c-navy stripe-both" style="width: 34px; height: 114px;"></div>
+            <div class="book c-orange band-cream" style="width: 40px; height: 76px;"></div>
+            <div class="book c-teal stripe-both" style="width: 40px; height: 110px;"><div class="circle-dot"></div></div>
+            <div class="book c-orange stripe-top" style="width: 14px; height: 118px;"></div>
+            <div class="book c-yellow stripe-top" style="width: 14px; height: 118px;"></div>
+            <div class="book c-teal" style="width: 26px; height: 118px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 12px; height: 64px;"></div>
+            <div class="book c-dark stripe-top" style="width: 22px; height: 86px;"></div>
+            <div class="book book-pages lean-left" style="width: 26px; height: 92px;"></div>
+        </div>
+
+        <!-- SHELF 5 -->
+        <div class="shelf-row">
+            <div class="book c-teal stripe-both" style="width: 34px; height: 82px;"></div>
+            <div class="book book-pages" style="width: 20px; height: 118px;"></div>
+            <div class="book c-orange stripe-both" style="width: 30px; height: 74px;"></div>
+            <div class="book c-teal stripe-top" style="width: 12px; height: 104px;"></div>
+            <div class="book c-teal stripe-both" style="width: 32px; height: 96px;"></div>
+            <div class="book book-pages-orange" style="width: 34px; height: 108px;"></div>
+            <div class="book c-yellow stripe-top" style="width: 18px; height: 76px;"></div>
+
+            <!-- Horizontal Stack on Shelf 5 -->
+            <div class="stack-group">
+                <div class="book-horiz c-navy" style="width: 92px; height: 15px;"></div>
+                <div class="book-horiz c-yellow" style="width: 84px; height: 24px; display:flex; align-items:center;"><div class="diamond"></div></div>
+            </div>
+
+            <div class="book c-dark stripe-both" style="width: 44px; height: 106px;"><div class="circle-orange"></div></div>
+            <div class="book book-pages" style="width: 34px; height: 76px;"></div>
+            <div class="book c-teal stripe-top" style="width: 16px; height: 92px;"></div>
+            <div class="book c-teal" style="width: 14px; height: 122px;"></div>
+            <div class="book c-yellow stripe-both" style="width: 22px; height: 112px;"></div>
+            <div class="book c-orange stripe-both" style="width: 18px; height: 118px;"></div>
+            <div class="book c-teal stripe-both" style="width: 32px; height: 100px;"><div class="diamond"></div></div>
+            <div class="book book-pages lean-right" style="width: 18px; height: 116px;"></div>
+            <div class="book c-yellow stripe-both lean-right" style="width: 14px; height: 86px;"></div>
+            <div class="book c-teal" style="width: 14px; height: 122px;"></div>
+            <div class="book c-navy stripe-top" style="width: 18px; height: 112px;"></div>
+            <div class="book c-orange band-teal" style="width: 42px; height: 106px;"></div>
+            <div class="book c-dark stripe-top lean-left" style="width: 24px; height: 88px;"></div>
+        </div>
+
+    </main>
+
+</body>
+</html></pre>
+        </body>
+    </html>
